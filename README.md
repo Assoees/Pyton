@@ -1,2 +1,2 @@
 # Pyton
-Pyton stuff
+Tseki mu püütonit
