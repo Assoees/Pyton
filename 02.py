@@ -11,7 +11,9 @@
 #impordime kilpkonna
 import turtle
 
-turtle.screensize(500, 400)
+aken = turtle.Screen()
+aken.setup(width=500,height=400)
+aken.title("Olümpiarõngad ja Asso Eesmäe")
 
 #sinine
 turtle.speed(0)
