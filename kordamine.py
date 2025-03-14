@@ -24,11 +24,11 @@ url = 'https://metshein.com/kordamine/json/broneeringud.json'
 response = requests.get(url)
 if response.status_code == 200:
     data = response.json()
-#     for broneering in data["broneeringud"]:
+    for broneering in data["broneeringud"]:
 
-#         if broneering["teenus"]=="Massaaž":
-#             massaaz += 1
-#     print(massaaz)
+        if broneering["teenus"]=="Massaaž":
+            massaaz += 1
+    print(massaaz)
 
 # #     Loetle unikaalsed teenused ja mitu korda neid broneeriti.
 #     teenused = {}
@@ -41,16 +41,16 @@ if response.status_code == 200:
 #     print(teenused)
 
     
-#  #	Leia kõik broneeringud, mis toimuvad pärast kella 12:00.       
+# #  #	Leia kõik broneeringud, mis toimuvad pärast kella 12:00.       
     
 
-# Broneeringud pärast 12:00
-    for broneering in data["broneeringud"]:
-# Võtame ainult tunnid ja minutid
-        aeg = datetime.datetime.strptime(broneering["aeg"], "%H:%M").time()
-# Kui aeg on väiksem kui 12
-        if aeg > datetime.time(12, 0):
-         print(broneering) 
+# # Broneeringud pärast 12:00
+#     for broneering in data["broneeringud"]:
+# # Võtame ainult tunnid ja minutid
+#         aeg = datetime.datetime.strptime(broneering["aeg"], "%H:%M").time()
+# # Kui aeg on väiksem kui 12
+#         if aeg > datetime.time(12, 0):
+#          print(broneering) 
 
 
 
