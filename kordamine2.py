@@ -33,41 +33,41 @@ if response.status_code == 200:
 
 # # #------------------------- ülemine jääb, alumist saab võtta välja kommentaarist    
 
-    #Algselt on 0 massaaži
-    massaaz = 0
-# # Käib loendi läbi ja vajamineva info leidmine failist broneeringud
-    for broneering in data["broneeringud"]:
-# Otsitakse teenuseid ja kui teenuseks on massaaž siis lisatakse +1
-        if broneering["teenus"]=="Massaaž":
-            massaaz += 1
-# Väljastab vastuse
-    print(massaaz)
+#     #Algselt on 0 massaaži
+#     massaaz = 0
+# # # Käib loendi läbi (broneering asemel võib olla mis iganes sõna/täht)
+#     for broneering in data["broneeringud"]:
+# # Otsitakse teenuseid ja kui teenuseks on massaaž siis lisatakse +1
+#         if broneering["teenus"]=="Massaaž":
+#             massaaz += 1
+# # Väljastab vastuse
+#     print(massaaz)
 
 # # #-----------------------------------
 
 # #     Loetle unikaalsed teenused ja mitu korda neid broneeriti.
 
-# # Defineerime teenused
-#     teenused = {}
-# # Käib loendi läbi ja vajamineva info leidmine failist broneeringud
-#     for broneering in data["broneeringud"]:
-# # Defineerime millele vastab teenus loetavas failis
-#         teenus = broneering["teenus"]
-# # Käib läbi faili ja otsib sealt välja teenus
-#         if teenus in teenused:
-# # Kui teenus leiti siis lisatakse +1 lõpp vastusele
-#             teenused[teenus] += 1
-# # Kui ei leitud siis aaab teenus endale väärtuseks 1
-#         else:
-#             teenused[teenus] = 1
-# # Väljastab vastuse
-#     print(teenused)
+# Tühja sõnastiku loomine
+    teenused = {}
+# Käib loendi läbi (broneering asemel võib olla mis iganes sõna/täht)
+    for broneering in data["broneeringud"]:
+# Defineerime millele vastab teenus loetavas failis
+        teenus = broneering["teenus"]
+# Käib läbi faili ja otsib sealt välja teenus
+        if teenus in teenused:
+# Kui teenus leiti siis lisatakse +1 lõpp vastusele
+            teenused[teenus] += 1
+# Kui ei leitud siis aaab teenus endale väärtuseks 1
+        else:
+            teenused[teenus] = 1
+# Väljastab vastuse
+    print(teenused)
 
 # # #-------------------------------------------------
     
 # # Leia kõik broneeringud, mis toimuvad pärast kella 12:00.       
 
-# # Käib loendi läbi ja vajamineva info leidmine failist broneeringud
+# # Käib loendi läbi (broneering asemel võib olla mis iganes sõna/täht)
 #     for broneering in data["broneeringud"]:
 # # Võtame ainult tunnid ja minutid
 #         aeg = datetime.datetime.strptime(broneering["aeg"], "%H:%M").time()
