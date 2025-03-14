@@ -35,8 +35,10 @@ if response.status_code == 200:
 #     for broneering in data["broneeringud"]:
 #         teenus = broneering["teenus"]
 #         if teenus in teenused:
+## Kui teenus leiti siis lisatakse 1
 #             teenused[teenus] += 1
 #         else:
+## Kui ei leitud jääb samaks
 #             teenused[teenus] = 1
 #     print(teenused)
 
