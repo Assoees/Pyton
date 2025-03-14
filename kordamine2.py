@@ -31,7 +31,7 @@ if response.status_code == 200:
 # Võtab andmed lehelt ja teeb (.json()) need pytonis kasutatavaks andmeteks, listiks/loendiks
     data = response.json()
 
-# # #------------------------- ülemine jääb, alumist saab võtta välja kommentaarist    
+# # #------------------------- ↑ ülemine ei muutu, alumist saab võtta välja kommentaarist ↓ -------------------------
 
 #     #Algselt on 0 massaaži
 #     massaaz = 0
@@ -43,7 +43,7 @@ if response.status_code == 200:
 # # Väljastab vastuse
 #     print(massaaz)
 
-# # #-----------------------------------
+# # #-----------------------------------Poolitab ülesande-----------------------------------
 
 # #     Loetle unikaalsed teenused ja mitu korda neid broneeriti.
 
@@ -63,7 +63,7 @@ if response.status_code == 200:
 # Väljastab vastuse
     print(teenused)
 
-# # #-------------------------------------------------
+# # #-------------------------------------------------Poolitab ülesande-------------------------------------------------
     
 # # Leia kõik broneeringud, mis toimuvad pärast kella 12:00.       
 
